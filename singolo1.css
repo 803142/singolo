@@ -137,3 +137,7 @@ ul.services-ul {
     margin-left: 2px;
     font-family: "Lato Light";
 }
+li.services-ul_item {
+    margin-right: 3px;
+    display: flex;
+}
