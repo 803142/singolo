@@ -71,7 +71,7 @@
 .gorisontal-item_link:active,.gorisontal-item_link:hover{
     color: rgba(240, 108, 100, 1);
 }
-.body-main{
+.main-slider{
     height: 600px;
     background-color: rgba(240, 108, 100, 1);
 }
