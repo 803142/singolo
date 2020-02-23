@@ -140,4 +140,6 @@ ul.services-ul {
 li.services-ul_item {
     margin-right: 3px;
     display: flex;
+    font-size: 0.7em;
+    line-height: 2.2em;
 }
