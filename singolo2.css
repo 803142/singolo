@@ -72,9 +72,42 @@
     width: 100%;
     justify-content: space-between;
     margin-top: 2.9em;
+    margin-bottom: 3.9rem;
 }
 .about-figure{
     margin: 0px;
-    max-width: 300px;
+    max-width: 301px;
     overflow: hidden;
+}
+.about-name {
+    margin-block-start: 0.5em;
+    letter-spacing: -0.3px;
+}
+.summory {
+    margin-block-start: -1em;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.06px;
+}
+.social {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 7px;
+    margin-top: 10.5px;
+}
+.social-link {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 31px;
+    width: 31px;
+    color: rgba(102, 109, 137, 1);
+}
+.social-link:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.social-img {
+    width: 1em;
+    height: 1em;
+    margin: 8px;
 }
