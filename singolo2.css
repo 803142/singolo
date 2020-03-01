@@ -1,0 +1,80 @@
+@import 'singolo1.css';
+.portfolio{
+    background-color: rgba(45, 48, 58, 1);
+    color: rgba(118, 126, 158, 1);
+    border-bottom: 6px solid rgba(50, 55, 70, 1);
+    padding: 0 2.5em;
+}
+[class$="-header"]{
+    display: grid;
+}
+[class$="-heading"]{
+    font-family: "Lato Black";
+    line-height: 1.9rem;
+    font-size: 1.9em;
+    margin-top: 4rem;
+    letter-spacing: -0.4px;
+}
+[class$="-additional-info"]{
+    margin-top: -5px;
+    margin-bottom: 0;
+    font-family: "Lato Light";
+    font-size: 19px;
+    letter-spacing: -0.41px;
+    line-height: 29px;
+    padding-right: 12px;
+}
+.portfolio-navigation {
+    margin-top: 2px; 
+    letter-spacing: 1px;
+    display: flex;
+}
+.portfolio-link{
+    border: 1px solid;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 3px 7px;
+    font-family: "Lato Light";
+    font-size: 12px;
+    letter-spacing: 0px;
+    margin: 10px 1px;
+    margin-right: 8px;
+    color: rgba(118, 126, 158, 1);
+}
+.portfolio-link-active, .portfolio-link:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.portfolio-ul{
+    display: grid;
+    grid-template-columns: repeat(4, 13.8rem);
+    grid-template-rows: repeat(3, 11.9rem);
+    list-style: none;
+    grid-gap: 1rem 1.2rem;
+    margin-block-start: 0.5em;
+    margin-block-end: 4rem;
+    overflow: hidden;
+    max-height: 37.75rem;
+    padding-inline-start: 0px;
+}
+.portfolio-img{
+    max-width: 100%;
+}
+.about{
+    background-color: rgba(242, 242, 242, 1);
+    border-bottom: 6px solid rgba(255, 255, 255, 1);
+    color: rgba(102, 109, 137, 1);
+    padding: 0 2.5em;
+}
+.about-ul{
+    display: inline-flex;
+    list-style: none;
+    padding-inline-start: 0px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2.9em;
+}
+.about-figure{
+    margin: 0px;
+    max-width: 300px;
+    overflow: hidden;
+}
