@@ -1,0 +1,80 @@
+@import 'singolo2.css';
+.contact{
+    background-color: rgba(240, 108, 100, 1);
+    padding: 0 2.5em;
+    color: rgba(240, 216, 217, 1)
+}
+.contact-header{
+    margin-top: 3,9rem;
+}
+.contact-heading{
+    margin-top: 3.9rem;
+}
+.contact-form{
+    display: grid;
+    margin-top: 2.9rem;
+    row-gap: 1rem;
+}
+.form-element{
+    background-color: rgba(214, 86, 79, 1);
+    line-height: 2.4rem;
+    border-radius: .4rem;
+}
+.form-input{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: rgba(240, 216, 217, 1);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: inherit;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+.form-textaria{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: rgba(240, 216, 217, 1);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textarea;
+    background-color: inherit;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    border-image: initial;
+    padding: 2px;
+}
+.contact ::placeholder{
+    color: rgba(240, 216, 217, 1);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(45, 48, 58, 1);
+}
