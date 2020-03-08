@@ -87,6 +87,7 @@
     margin-block-start: 1.7em;
     font-size: 0.7rem;
     line-height: 1.4rem;
+    padding-inline-start: 23px;
 }
 .information {
     margin: -0.1rem;
@@ -99,4 +100,32 @@
     line-height: 1.38rem;
     margin-top: 0.6rem;
     word-spacing: 0px;
+}
+.address::before {
+    content: url(assets/images/location@1X.png);
+    margin: 0px -20px;
+    position: absolute;
+    top: 1px;
+}
+.phone::before {
+    content: url(assets/images/phone@1X.png);
+    margin: 0px -22px;
+    position: absolute;
+    top: 1px;
+}
+.email::before {
+    content: url(assets/images/mail@1X.png);
+    margin: 0px -23px;
+    position: absolute;
+    top: 1px;
+}
+.copyright {
+    font-size: 0.73rem;
+    font-family: "Lato light";
+    margin-left: 2px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.3rem;
+}
+.contact-item{
+    position: relative;
 }
