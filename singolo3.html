@@ -17,18 +17,18 @@
             </p>
         </header>
         <main class="contact-main">
-            <form class="contact-form" action="" method="post">
+            <form id="contact" class="contact-form" action="" method="post">
                 <div class="form-element">
-                    <input class="form-input" type="text" name="" id="" placeholder="Name (Required)">
+                    <input class="form-input" type="text" form="contact" name="name" id="name" placeholder="Name (Required)" required>
                 </div>
                 <div class="form-element">
-                    <input class="form-input" type="email" name="" id="" placeholder="Email (Required)">
+                    <input class="form-input" type="email" form="contact" name="email" id="email" placeholder="Email (Required)" required>
                 </div>
                 <div class="form-element">
-                    <input class="form-input" type="email" name="" id="" placeholder="Subject">
+                    <input class="form-input" type="text" form="contact" name="subject" id="subject" placeholder="Subject">
                 </div>
                 <div class="form-element">
-                    <textarea class="form-textaria" name="" id="" cols="60" rows="13" placeholder="Describe your project in detail..."></textarea>
+                    <textarea class="form-textaria" form="contact" name="describe" id="describe" cols="60" rows="13" placeholder="Describe your project in detail..."></textarea>
                 </div>
             </form>
             <aside class="contact-information">
