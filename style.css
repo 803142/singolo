@@ -104,6 +104,7 @@
 .wrapper{
     width: 1020px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .main-section_services {
     padding: 2rem 2.4rem;
