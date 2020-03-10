@@ -249,7 +249,7 @@ h2.section_services-h2 {
 .social {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 7px;
+    grid-gap: 9px;
     margin-top: 10.5px;
 }
 .social-link {
