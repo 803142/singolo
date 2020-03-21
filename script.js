@@ -69,6 +69,17 @@ window.onload = () => {
             state.activeSlide = state.nextSlide;
             state.nextSlide = state.prevSlide;
         },
+        foneScreenSwitcher : (item) => {
+            let target = item.target;
+            console.log(target.className);
+            while (target.className !== 'slider-slide1'){
+                if (target.className === 'fone-contur'){
+                    target.querySelector('.fone-screen').classList.toggle('switch-off-fone-screen') 
+                }
+                target = target.parentNode;
+            }
+
+        },
         portfolioMenuChanges : (item) => {
             item.preventDefault();
             const target = helper.findTargetNode(item.target, 'A', 'NAV');
@@ -108,5 +119,8 @@ window.onload = () => {
     slideLeft.onclick = activity.slideLeft;
     slideRight.onclick = activity.slideRight;
 
-    document.addEventListener('click',(e)=>{console.log(e.target.tagName)})
+    const slideSlide1 = document.querySelector('.slider-slide1');
+    slideSlide1.addEventListener('click', (e) => {
+        activity.foneScreenSwitcher(e);
+    })
 }
