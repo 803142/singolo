@@ -130,6 +130,7 @@
     left: 60px;
     top: 14px;
 }
+
 .switch-off-fone-screen {
     background-color: black;
 }
@@ -307,6 +308,9 @@
 }
 .portfolio-img{
     max-width: 100%;
+}
+.portfolio-img-bordered{
+    border: 5px #F06C64 solid  ;
 }
 .about{
     color: rgba(102, 109, 137, 1);

@@ -93,8 +93,13 @@ window.onload = () => {
         portfolioImagesChanges : (collection) => {
             const compare = helper.madness();
             return [...collection].sort(compare);
+        },
+        portfolioImagesBorder : (item) => {
+            let target = helper.findTargetNode(item.target, 'IMG', 'UL');
+            if (target){
+                target.classList.toggle('portfolio-img-bordered');
+            }
         }
-
     }
 
     state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active');
@@ -123,4 +128,7 @@ window.onload = () => {
     slideSlide1.addEventListener('click', (e) => {
         activity.foneScreenSwitcher(e);
     })
+
+    const portfolioUl = document.querySelector('.portfolio-ul');
+    portfolioUl.addEventListener('click', (e) => {activity.portfolioImagesBorder(e)})
 }
