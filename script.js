@@ -1,8 +1,11 @@
 window.onload = () => {
     const state = {
-        activeMainMenu : document.getElementsByClassName('active')[0],
-        activePortfolioMenu : document.getElementsByClassName('portfolio-link-active')[0],
-        activeSlide : document.getElementsByClassName('slider-slide-active')[0],
+        activeMainMenu : document.querySelector('.active'),
+        activePortfolioMenu : document.querySelector('.portfolio-link-active'),        
+        sliderCollection : [...document.querySelectorAll('.slider-slide')],
+        activeSlide : 0,
+        nextSlide : 1,
+        prevSlide : 1,
     }
 
     const helper = {
@@ -42,12 +45,29 @@ window.onload = () => {
                 state.activeMainMenu = target;
             }
         },
-        slideLeft : (e) => {
-            console.log(e);
-            state.activeSlide.classList.toggle('slider-slide-active')
+        slideLeft : () => {
+            state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active');
+            state.sliderCollection[state.prevSlide].classList.toggle('slider-slide-left');            
+            setTimeout(function () { 
+                state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active'); 
+                state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-left');
+            }, 0);
+            
+            state.nextSlide = state.activeSlide;
+            state.activeSlide = state.prevSlide;
+            state.prevSlide = state.nextSlide; 
         },
-        slideRight : (e) => {
-            e.target.classList.toggle('slider-slide-active')
+        slideRight : () => {
+            state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active');
+            state.sliderCollection[state.nextSlide].classList.toggle('slider-slide-right');            
+            setTimeout(function () { 
+                state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active'); 
+                state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-right');
+            }, 0);
+
+            state.prevSlide = state.activeSlide;            
+            state.activeSlide = state.nextSlide;
+            state.nextSlide = state.prevSlide;
         },
         portfolioMenuChanges : (item) => {
             item.preventDefault();
@@ -66,22 +86,27 @@ window.onload = () => {
 
     }
 
-    const mainMenu = document.getElementsByClassName('body-header_nav')[0];
+    state.sliderCollection[state.activeSlide].classList.toggle('slider-slide-active');
 
-    const portfolioMenu = document.getElementsByClassName('portfolio-navigation')[0];
+    const mainMenu = document.querySelector('.body-header_nav');
+
+    const portfolioMenu = document.querySelector('.portfolio-navigation');
 
     mainMenu.addEventListener('click', (e) => {activity.mainMenuChanges(e)});
     portfolioMenu.addEventListener('click', (e) => {
         activity.portfolioMenuChanges(e);
-        const collection = document.getElementsByClassName('portfolio-item');
+        const collection = document.querySelectorAll('.portfolio-item');
 
         activity.portfolioImagesChanges(collection).map((element, i) => {
             element.setAttribute('style', `grid-column: ${i%4+1}; grid-row: ${(i-i%4)/4+1} / ${(i-i%4)/4+2};`);
         });
     }, false);
-    const slideLeft = document.getElementsByClassName('nav-slider prev')[0];
-    const slideRight = document.getElementsByClassName('nav-slider next')[0];
+
+    const slideLeft = document.querySelector('.prev-slide');
+    const slideRight = document.querySelector('.next-slide');
+
     slideLeft.onclick = activity.slideLeft;
     slideRight.onclick = activity.slideRight;
+
     document.addEventListener('click',(e)=>{console.log(e.target.tagName)})
 }
