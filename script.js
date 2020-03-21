@@ -99,6 +99,10 @@ window.onload = () => {
             if (target){
                 target.classList.toggle('portfolio-img-bordered');
             }
+        },
+        getAQuoteFormSubmit : (event) => {
+            console.log(event.target);
+            event.preventDefault();
         }
     }
 
@@ -130,5 +134,8 @@ window.onload = () => {
     })
 
     const portfolioUl = document.querySelector('.portfolio-ul');
-    portfolioUl.addEventListener('click', (e) => {activity.portfolioImagesBorder(e)})
+    portfolioUl.addEventListener('click', (e) => {activity.portfolioImagesBorder(e)});
+
+    const getAQuoteForm = document.forms.getaquote;
+    getAQuoteForm.onsubmit = activity.getAQuoteFormSubmit;
 }

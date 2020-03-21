@@ -404,6 +404,7 @@
     border-color: initial;
     border-image: initial;
     line-height: 2.4rem;
+    width: 100%;
 }
 .form-textaria{
     color: rgba(240, 216, 217, 1);
@@ -419,6 +420,7 @@
     border-color: rgb(169, 169, 169);
     border-image: initial;
     padding: 0.6rem 0 0;
+    width: 100%;
 }
 .contact ::placeholder{
     color: rgba(240, 216, 217, 1);
