@@ -200,6 +200,7 @@
 .wrapper{
     width: 1020px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .main-section_services {
     padding: 0 2.5em;
