@@ -26,12 +26,12 @@
                         </a>
                     </li>
                     <li class="ul_gorisontal-li_item">
-                        <a href="" class="gorisontal-item_link">
+                        <a href="#portfolio" class="gorisontal-item_link">
                             Portfolio
                         </a>
                     </li>
                     <li class="ul_gorisontal-li_item">
-                        <a href="#portfolio" class="gorisontal-item_link">
+                        <a href="#about" class="gorisontal-item_link">
                             About
                         </a>
                     </li>
@@ -48,31 +48,54 @@
         <div class="bgc-slider">
             <div class="main-slider wrapper">
                 <nav class="slider-nav">
-                    <a href="#" class="nav-slider prev">
+                    <button class="nav-slider prev-slide">
                         <img src="assets/images/prev.png" alt="previous" class="slide-nav_img">
-                    </a>
-                    <a href="#" class="nav-slider next">
+                    </button>
+                    <button class="nav-slider next-slide">
                         <img src="assets/images/next.png" alt="next" class="slide-nav_img">
-                    </a>
+                    </button>
                 </nav>
-                <div class="slider-ul_list">
-                    <figure class="slide-figure">
-                        <img src="assets/images/phone_vertical.png" alt="vertical phone" class="slide-figure_img">
-                    </figure>
-                    <figure class="slide-figure">
-                        <img src="assets/images/phone_horizontal.png" alt="horizontal phone" class="slide-figure_img">
-                    </figure>
+                <div class="slider-list">
+                    <div class="slider-slide">
+                        <div class="slider-slide1">
+                            <figure class="slide-figure">
+                                <img src="assets/images/phone_vertical.png" alt="vertical phone" class="slide-figure_img">
+                                <div class="black-screen">
+                                    <div class="fone-contur">
+                                        <div class="fone-screen"></div>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="slide-figure">
+                                <img src="assets/images/phone_horizontal.png" alt="horizontal phone" class="slide-figure_img">
+                                <div class="black-screen-horisontal">
+                                    <div class="fone-contur">
+                                        <div class="fone-screen fone-screen-horisontal"></div>
+                                    </div>
+                                </div>
+                            </figure>                        
+                        </div> 
+                    </div>
+
+                    <div class="slider-slide">
+                        <figure class="slide-figure">
+                            <img src="assets/images/slide2.png" alt="vertical phone" class="slide-figure_img">
+                        </figure>                      
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bgc-service">
             <section class="main-section_services wrapper" id="services">
-                <h2 class="section_services-h2">
-                    Our Services
-                </h2>
-                <p class="section_services-about">
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                </p>
+                <header class="services-header">
+                    <h2 class="services-heading">
+                        Our Services
+                    </h2>
+                    <p class="services-additional-info">
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    </p>
+                </header>
+
                 <ul class="services-ul">
                     <li class="services-ul_item">
                         <img src="assets/images/pen.svg" alt="Custom Design" class="services-ul_item_img">
@@ -153,7 +176,7 @@
             </section>
         </div>
         <div class="bgc-about">
-            <section class="about wrapper">
+            <section class="about wrapper" id="about">
                 <header class="about-header">
                     <h2 class="about-heading">
                         About Us
@@ -252,18 +275,18 @@
                     </p>
                 </header>
                 <main class="contact-main">
-                    <form class="contact-form" action="" method="post">
+                    <form id="getaquote" class="contact-form" action="" method="post">
                         <div class="form-element">
-                            <input class="form-input" type="text" pattern="[A-Za-z]+" name="" id="" placeholder="Name (Required)" required>
+                            <input class="form-input" type="text" pattern="[A-Za-z]+" name="name" id="" placeholder="Name (Required)" required>
                         </div>
                         <div class="form-element">
-                            <input class="form-input" type="email" pattern="\w+@[A-Za-z0-9]+.[a-z]+" name="" id="" placeholder="Email (Required)" required>
+                            <input class="form-input" type="email" pattern="\w+@[A-Za-z0-9]+.[a-z]+" name="email" id="" placeholder="Email (Required)" required>
                         </div>
                         <div class="form-element">
-                            <input class="form-input" type="text" name="" id="" placeholder="Subject">
+                            <input class="form-input" type="text" name="subject" id="" placeholder="Subject">
                         </div>
                         <div class="form-element">
-                            <textarea class="form-textaria" name="" id="" cols="60" rows="13" placeholder="Describe your project in detail..."></textarea>
+                            <textarea class="form-textaria" name="description" id="" cols="60" rows="13" placeholder="Describe your project in detail..."></textarea>
                         </div>
                         <div class="form-element">
                             <input class="form-input" type="submit" value="Send Request">
@@ -305,5 +328,6 @@
             </nav>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
