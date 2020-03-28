@@ -68,7 +68,7 @@
     display: none;
     width: 25px;
     height: 20px;
-    margin: 32px 20px;
+    margin: 26px 20px;
     transition: transform 0.2s ease;
     position: absolute;
     left: 0;
@@ -84,10 +84,10 @@
     width: 25px;
 }
 .nav-btn .hum-line:nth-child(2){
-    margin-top: 8px;
+    margin-top: 7px;
 }
 .nav-btn .hum-line:nth-child(3){
-    margin-top: 8px;
+    margin-top: 5px;
 }
 .ul_gorisontal-li_item{
     letter-spacing: -0.1px;
@@ -577,13 +577,31 @@ input:invalid {
 .submit{
     background-color: #FBC65F;
     color: #886A30;
+    text-align: center;
+    text-transform: uppercase;
 }
 @media screen and (max-width: 768px){
+    .nav-ul_gorisontal {
+        margin-top: 6px;
+    }
     .main-slider {
-        height: 65vw;
+        height: 58vw;
+    }
+    .slide-nav_img {
+        margin: 0px 29px;
     }
     .slider-slide1 {
-        grid-template-columns: 15% 26.5% 46.5% 15% ;
+        grid-template-columns: 4% 23.5% 47.5% 15%;
+        grid-gap: 7%;
+    }
+    .services-header [class$="-heading"] {
+        margin-top: 2.75rem;
+    }
+    .services-ul {
+        grid-gap: 2.3rem 0.9rem;
+        margin-block-start: 2em;
+        margin-block-end: 3.85rem;
+        grid-template-columns: 1fr 1fr;
     }
     .body-header_logo {
         margin: 29px 0px 30px 40px;
@@ -592,16 +610,51 @@ input:invalid {
         font-size: 25px;
         letter-spacing: -0.5px;
     }
-    .services-ul {
-        grid-template-columns: 1fr 1fr;
-    }
     .portfolio-ul {
-        grid-template-columns: repeat(3, 30.5%);
+        grid-template-columns: repeat(3, 31.4%);
         grid-template-rows: repeat(4, 23.3%);
         max-height: 50.75rem;
+        margin-top: 17px;
+        grid-gap: 1.1rem 1.2rem;
+        margin-block-end: 3.8rem;
+    }
+    .about-header [class$="-heading"] {
+        margin-top: 3.45rem;
+        margin-bottom: 1.64rem;
+    }
+    .about-ul {
+        margin-top: 2.7em;
+        margin-bottom: 4.3rem;
+    }
+    .about-name {
+        margin-block-start: 0.3em;
+        margin-block-end: 0.7em;
+    }
+    .summory {
+        margin-block-end: -0.2em;
+    }
+    .services-ul_item {
+        grid-template-columns: 1fr 3.3fr;
+    }
+    .contact-heading {
+        margin-top: 3.5rem;
+    }
+    .contact-main {
+        grid-template-columns: 2.2fr 1.1fr;
+        grid-column-gap: 1.8rem;
+        margin: 1.7rem 0 2.55rem;
+        font-family: "Lato regular";
+    }
+    .contact-form {
+        display: grid;
+        grid-gap: 0.8rem;
+    }
+    .form-textaria {
+        height: 10rem;
     }
     .footer {
         justify-content: center;
+        padding: 0.7rem 2.5em 1.3rem;
     }
     .copyright{
         display: none;
@@ -673,20 +726,88 @@ input:invalid {
     }
 }
 @media screen and (max-width: 375px){
+    .body-header_logo {
+        margin: 25px 0px 18px;
+        font-size: 19px;
+    }
+    .main-slider {
+        height: 57vw;
+    }
     .slider-slide1 {
-        grid-template-columns: 20% 21.5% 38.5% 20%;
+        grid-template-columns: 4% 23.5% 47.5% 20%;
+    }
+    .slide-nav_img {
+        margin: 0px 8px;
     }
     .portfolio-ul {
-        grid-template-columns: repeat(2, 45.5%);
-        max-height: 32.75rem;
-        grid-template-rows: repeat(4, 22.3%);
+        grid-template-columns: repeat(2, 47.2%);
+        max-height: 35.15rem;
+        margin-block-end: 1.5rem;
+        grid-gap: 0.2rem 1.1rem;
+        grid-template-rows: repeat(4, 24.5%);
     }
     .portfolio-link {
         font-size: 11px;
     }
     .contact-main {
         grid-template-columns: 1fr;
-        margin: 2rem 0 0 0rem;
-        grid-gap: 1rem;
+        margin: 1.3rem 0 0 0rem;
+        grid-gap: 2rem;
+    }
+    .services-header [class$="-heading"] {
+        margin-top: 1.85rem;
+    }
+    .services-ul {
+        grid-gap: 0.8rem 0.9rem;
+        margin-block-start: -0.1em;
+        margin-block-end: 0.65rem;
+    }
+    .contact, .about, .portfolio, .main-section_services {
+        padding: 0 2em;
+    }
+    .portfolio-link {
+        margin-right: 12px;
+    }
+    .portfolio-navigation {
+        margin-top: 9px;
+    }
+    .portfolio [class$="-heading"] {
+        margin-top: 2.85rem;
+    }
+    .about-header [class$="-heading"] {
+        margin-top: 2.35rem;
+        margin-bottom: 1.64rem;
+    }
+    .contact-additional-info, .about-header [class$="-additional-info"] {
+        padding-right: 11px;
+        line-height: 30px;
+    }
+    .about-figure {
+        margin: 0px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .about-ul {
+        margin-top: 1.6em;
+        grid-gap: 2.1em;
+        margin-bottom: 2.5rem;
+    }
+    .about-name {
+        margin-block-start: 0.9em;
+    }
+    .contact-heading {
+        margin-top: 2.9rem;
+    }
+    .submit {
+        height: 49px;
+    }
+    .information-rewue {
+        margin-top: 0.2rem;
+    }
+    .contact-information-ul {
+        margin-block-start: 0em;
+        line-height: 1.5rem;
+        padding-inline-start: 21px;
+        margin-block-end: 3em;
     }
 }
