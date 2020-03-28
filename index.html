@@ -9,39 +9,51 @@
 <body class="body">
     <div class="bgc-header">
         <header class="body-header wrapper">
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i class="hum-line"></i>
+                <i class="hum-line"></i>
+                <i class="hum-line"></i>
+            </label>
             <h1 class="body-header_logo">
                 Singolo 
                 <span class="logo-span_red">*</span>
             </h1>
-            <nav class="body-header_nav">
-                <ul class="nav-ul_gorisontal">
-                    <li class="ul_gorisontal-li_item">
-                        <a href="#" class="gorisontal-item_link active">
-                            Home
-                        </a>
-                    </li>
-                    <li class="ul_gorisontal-li_item">
-                        <a href="#services" class="gorisontal-item_link">
-                            Services
-                        </a>
-                    </li>
-                    <li class="ul_gorisontal-li_item">
-                        <a href="#portfolio" class="gorisontal-item_link">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li class="ul_gorisontal-li_item">
-                        <a href="#about" class="gorisontal-item_link">
-                            About
-                        </a>
-                    </li>
-                    <li class="ul_gorisontal-li_item">
-                        <a href="#contacts" class="gorisontal-item_link">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="nav-wrapper">
+                <div class="body-header_logo body-header_logo-mobile">
+                    Singolo 
+                    <span class="logo-span_red">*</span>
+                </div>
+                <nav class="body-header_nav">
+                    <ul class="nav-ul_gorisontal">
+                        <li class="ul_gorisontal-li_item">
+                            <a href="#" class="gorisontal-item_link active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="ul_gorisontal-li_item">
+                            <a href="#services" class="gorisontal-item_link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="ul_gorisontal-li_item">
+                            <a href="#portfolio" class="gorisontal-item_link">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="ul_gorisontal-li_item">
+                            <a href="#about" class="gorisontal-item_link">
+                                About
+                            </a>
+                        </li>
+                        <li class="ul_gorisontal-li_item">
+                            <a href="#contacts" class="gorisontal-item_link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     </div>
     <main class="body-main">
@@ -288,8 +300,8 @@
                         <div class="form-element">
                             <textarea class="form-textaria" name="description" id="" cols="60" rows="13" placeholder="Describe your project in detail..."></textarea>
                         </div>
-                        <div class="form-element">
-                            <input class="form-input" type="submit" value="Send Request">
+                        <div class="form-element submit">
+                            <input class="form-input submit"" type="submit" value="Send Request" >
                         </div>
                     </form>
                     <aside class="contact-information">
