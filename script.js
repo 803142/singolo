@@ -120,10 +120,10 @@ window.onload = () => {
     portfolioMenu.addEventListener('click', (e) => {
         activity.portfolioMenuChanges(e);
         const collection = document.querySelectorAll('.portfolio-item');
+        const portfolio = document.querySelector('.portfolio-ul');
 
-        activity.portfolioImagesChanges(collection).map((element, i) => {
-            element.setAttribute('style', `grid-column: ${i%4+1}; grid-row: ${(i-i%4)/4+1} / ${(i-i%4)/4+2};`);
-        });
+        portfolio.innerHTML = '';
+        activity.portfolioImagesChanges(collection).reduce((acc, cur) => { return portfolio.appendChild(cur) ; }, portfolio);
     }, false);
 
     const slideLeft = document.querySelector('.prev-slide');
