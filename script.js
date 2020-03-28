@@ -105,6 +105,7 @@ window.onload = () => {
             alert(`Письмо отправлено 
             \n\r Тема: ${subject.value?subject.value==='Singolo'?subject.value:'Без темы':'Без темы' } 
             \n\r Описание: ${description.value?description.value==='Portfolio project'?description.value:'Без описания':'Без описания'}`);
+            event.target.reset();
             event.preventDefault();
         }
     }
